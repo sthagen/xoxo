@@ -1,0 +1,8 @@
+ X  X XX
+X   O OO
+   OOXO 
+ OO XOX 
+ OXOOX X
+ X XX  X
+   XOX  
+ O  X   
