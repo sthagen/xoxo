@@ -1,6 +1,5 @@
 #! /usr/bin/env python
 """Solve me xoxo."""
-import copy
 import pathlib
 import sys
 from typing import List, Union
@@ -200,7 +199,7 @@ def assess(grid: Matrix) -> str:
         if not matrix_twin_max_holds(matrix):
             return f'More than two symbols of a kind together in a row or column.{note}'
 
-    return f''
+    return ''
 
 
 def main(argv: Union[List[str], None] = None) -> int:
