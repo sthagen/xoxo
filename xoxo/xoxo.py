@@ -1,7 +1,9 @@
 #! /usr/bin/env python
 """Solve me xoxo."""
+import copy
 import pathlib
 import sys
+from typing import List, Union
 
 ENCODING = 'utf-8'
 X = 'x'
@@ -9,49 +11,51 @@ O = 'o'
 E = ' '
 SYMBOLS = (X, O)
 TOKENS = (E, *SYMBOLS)
+Matrix = List[List[str]]
+Vector = List[str]
 
 
-def sanitize_input(matrix):
+def sanitize_input(strings: Vector) -> Matrix:
     """Consider only the minimal span and ignore empty lines."""
-    matrix = [row[:-1] for row in matrix if row[:-1]]
+    matrix = [row[:-1] for row in strings if row[:-1]]
     min_span = min([len(row) for row in matrix])
     return [[cell.lower() if cell.lower() in TOKENS else E for cell in cells[0:min_span]] for cells in matrix]
 
 
-def load(grid):
+def load(grid: pathlib.Path) -> Matrix:
     """Load the grid from a text file.
 
     The symbols have to be exactly present as upper case x and o.
     To ease entering the data the empty cell can be any other character.
     """
     with open(grid, 'rt', encoding=ENCODING) as handle:
-        matrix = handle.readlines()
-    return sanitize_input(matrix)
+        strings = handle.readlines()
+    return sanitize_input(strings)
 
 
-def render_row(cells, row_number):
+def render_row(cells: Vector, row_number: int) -> str:
     """The row internal printing format of rows."""
     inner = ' | '.join(cell.upper() for cell in cells)
     return f'| {inner} | {row_number :2d}'
 
 
-def render_horizontal_border(dim, top=False):
+def render_horizontal_border(dim: int, top: bool = False) -> str:
     """Render the border (default bottom)."""
     corner = ',' if top else '*'
     return f'\n{corner}{"---+" * (dim -1)}---{corner}\n'
 
 
-def render_ruler(dim):
+def render_ruler(dim: int) -> str:
     """Render the ruler lines between data rows."""
     return f'\n|{"---+" * (dim -1)}---|\n'
 
 
-def render_col_numbers(dim):
+def render_col_numbers(dim: int) -> str:
     """Render the index row labeling the columns with numbers."""
     return f'{"".join(f" {c :2d} " for c in range(1, dim+1))}\n'
 
 
-def matrix_to_text(grid):
+def matrix_to_text(grid: Matrix) -> str:
     """Do the ASCIInation dance ..."""
     dim = len(grid[0])
     ruler = render_ruler(dim)
@@ -65,18 +69,18 @@ def matrix_to_text(grid):
     )
 
 
-def transpose_column(n, grid):
+def transpose_column(n: int, grid: Matrix) -> Vector:
     """Transpose a column to a row."""
     return [r[n] for r in grid]
 
 
-def transpose(grid):
+def transpose(grid: Matrix) -> Matrix:
     """Transpose the grid so we can verify column rules on the transposed row."""
     dim = len(grid)
     return [transpose_column(n, grid) for n in range(0, dim)]
 
 
-def row_twin_max_holds(symbol, row):
+def row_twin_max_holds(symbol: str, row: Vector) -> bool:
     """Three in a row would fail,, so we test for that."""
     dim = len(row)
     twin = 2
@@ -86,7 +90,7 @@ def row_twin_max_holds(symbol, row):
     return True
 
 
-def matrix_twin_max_holds(grid):
+def matrix_twin_max_holds(grid: Matrix) -> bool:
     """Do we have more than twin siblings across the matrix?"""
     for row in grid:
         for symbol in SYMBOLS:
@@ -95,7 +99,7 @@ def matrix_twin_max_holds(grid):
     return True
 
 
-def row_equity_holds(row):
+def row_equity_holds(row: Vector) -> bool:
     """Row equity verification."""
     dim = len(row)
     symbol_count = {symbol: 0 for symbol in SYMBOLS}
@@ -106,7 +110,7 @@ def row_equity_holds(row):
     return not any(2 * cnt > dim for cnt in symbol_count.values())
 
 
-def matrix_equity_holds(grid):
+def matrix_equity_holds(grid: Matrix) -> bool:
     """Did we overspent some symbol across the matrix?"""
     for r in grid:
         if not row_equity_holds(r):
@@ -114,7 +118,7 @@ def matrix_equity_holds(grid):
     return True
 
 
-def rows_equal(wun, other):
+def rows_equal(wun: Vector, other: Vector) -> bool:
     """Are the two rows equal (with set symbols)?"""
     dim = len(wun)
     for i in range(0, dim):
@@ -125,7 +129,7 @@ def rows_equal(wun, other):
     return True
 
 
-def any_row_equal(grid):
+def any_row_equal(grid: Matrix) -> bool:
     for i in range(0, len(grid) - 1):
         for j in range(i + 1, len(grid)):
             if rows_equal(grid[i], grid[j]):
@@ -133,7 +137,7 @@ def any_row_equal(grid):
     return False
 
 
-def solve(i, j, grid, transposed, dim):
+def solve(i: int, j: int, grid: Matrix, transposed: Matrix, dim: int) -> Union[bool, Matrix]:
     """Recursive solver."""
     for matrix in (grid, transposed):
         if any_row_equal(matrix) or not matrix_equity_holds(matrix) or not matrix_twin_max_holds(matrix):
@@ -169,12 +173,30 @@ def solve(i, j, grid, transposed, dim):
     return res_post
 
 
-def solution(grid):
+def solution(grid: Matrix) -> Union[bool, Matrix]:
     """Seek a solution of the problem grid."""
     return solve(0, 0, grid, transpose(grid), len(grid))
 
 
-def main(argv=None):
+def assess(grid: Matrix) -> str:
+    """Analyze the grid for common hindrance to convergence."""
+    if all([E not in row for row in grid]):
+        return 'Received a completely filled grid - what is the expectation?'
+    if len(grid) < 2:
+        return 'You need at least 2 cells for a valid solution.'
+    transposed = transpose(grid)
+    for matrix in (grid, transposed):
+        if any_row_equal(matrix):
+            return 'Neighbor rows or columns are identical.'
+        if not matrix_equity_holds(matrix):
+            return 'Some symbol has been overused.'
+        if not matrix_twin_max_holds(matrix):
+            return 'More than two symbols of a kind together in a row or column.'
+
+    return 'Assessment found no defect.'
+
+
+def main(argv: Union[List[str], None] = None) -> int:
     """Drive the solution of a grid input from file."""
     argv = sys.argv[1:] if argv is None else argv
     if not argv:
@@ -186,12 +208,17 @@ def main(argv=None):
         print(f'ERROR: grid file ({grid_path}) does not exist or is empty.')
         return 1
 
-    grid = load(grid_path)
+    partial = load(grid_path)
+    complete = solution(copy.deepcopy(partial))
     print('Problem:')
-    print(matrix_to_text(grid))
-    print()
-    print('Solution:')
-    print(matrix_to_text(solution(grid)))
+    print(matrix_to_text(partial))
+    if complete:
+        print()
+        print('Solution:')
+        print(matrix_to_text(complete))  # type: ignore
+    else:
+        print('Analysis:', assess(partial))
+        print()
     return 0
 
 
