@@ -1,10 +1,11 @@
 SHELL = /bin/bash
 
 .DEFAULT_GOAL := all
-isort = isort xoxo test
 black = black -S -l 120 --target-version py310 xoxo test
 flake8 = flake8 --ignore E741 xoxo test
+isort = isort xoxo test
 pytest = pytest --asyncio-mode=strict --cov=xoxo --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
+types = mypy xoxo
 
 .PHONY: install
 install:
@@ -35,7 +36,7 @@ lint:
 
 .PHONY: types
 types:
-	@echo Skipping mypy xoxo
+	$(types)
 
 .PHONY: test
 test: clean
