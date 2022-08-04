@@ -111,7 +111,7 @@ def row_equity_holds(row: Vector) -> bool:
 
 
 def matrix_equity_holds(grid: Matrix) -> bool:
-    """Did we overspent some symbol across the matrix?"""
+    """Did we overspend some symbol across the matrix?"""
     for r in grid:
         if not row_equity_holds(r):
             return False
@@ -180,20 +180,27 @@ def solution(grid: Matrix) -> Union[bool, Matrix]:
 
 def assess(grid: Matrix) -> str:
     """Analyze the grid for common hindrance to convergence."""
-    if all([E not in row for row in grid]):
-        return 'Received a completely filled grid - what is the expectation?'
-    if len(grid) < 2:
-        return 'You need at least 2 cells for a valid solution.'
+    no_option = all([E not in row for row in grid])
+    note = '\n-   Note: Received a completely filled (invalid) grid - what is the expectation?' if no_option else ''
+    outer_dim = len(grid)
+    if outer_dim < 2:
+        return f'You need at least 2 times 2 cells for a valid solution.{note}'
+    if outer_dim % 2:  # odd i.e. 3, 5, 7, ...
+        return f'You need even squares to balance the symbols per row and column.{note}'
+    inner_dim = len(grid[0])
+    if inner_dim != outer_dim:
+        problem = f'found a {outer_dim} times {inner_dim} rectangle instead.'
+        return f'You need (even) squares to balance the symbols per row and column - {problem}{note}'
     transposed = transpose(grid)
     for matrix in (grid, transposed):
         if any_row_equal(matrix):
-            return 'Neighbor rows or columns are identical.'
+            return f'Neighbor rows or columns are identical.{note}'
         if not matrix_equity_holds(matrix):
-            return 'Some symbol has been overused.'
+            return f'Some symbol has been overused.{note}'
         if not matrix_twin_max_holds(matrix):
-            return 'More than two symbols of a kind together in a row or column.'
+            return f'More than two symbols of a kind together in a row or column.{note}'
 
-    return 'Assessment found no defect.'
+    return f''
 
 
 def main(argv: Union[List[str], None] = None) -> int:
@@ -209,17 +216,24 @@ def main(argv: Union[List[str], None] = None) -> int:
         return 1
 
     partial = load(grid_path)
-    complete = solution(copy.deepcopy(partial))
     print('Problem:')
     print(matrix_to_text(partial))
+    findings = assess(partial)
+    if findings:
+        print('Analysis:', assess(partial))
+        print()
+        return 1
+
+    complete = solution(partial)
     if complete:
         print()
         print('Solution:')
         print(matrix_to_text(complete))  # type: ignore
-    else:
-        print('Analysis:', assess(partial))
-        print()
-    return 0
+        return 0
+
+    print('Failed to converge due to an unkown reason.')
+    print()
+    return 1
 
 
 if __name__ == '__main__':
