@@ -20,21 +20,21 @@ def test_main_gone(capsys):
 
 
 def test_main_empty(capsys):
-    assert xo.main([FIXTURES / 'grid_empty.txt']) == 1
+    assert xo.main([str(FIXTURES / 'grid_empty.txt')]) == 1
     out, err = capsys.readouterr()
     assert not err
     assert 'does not exist or is empty' in out
 
 
 def test_main_grid_s_1(capsys):
-    assert xo.main([FIXTURES / 'grid_s_1.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_s_1.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '| O | X | X | O | X | O |  4' in out
 
 
 def test_main_grid_s_1_space_alien(capsys):
-    assert xo.main([FIXTURES / 'grid_s_1_space_alien.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_s_1_space_alien.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '| O | X |   |   |   | X |  3' in out
@@ -42,7 +42,7 @@ def test_main_grid_s_1_space_alien(capsys):
 
 
 def test_main_grid_s_2(capsys):
-    assert xo.main([FIXTURES / 'grid_s_2.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_s_2.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '| O |   |   |   | X | O |  5' in out
@@ -50,7 +50,7 @@ def test_main_grid_s_2(capsys):
 
 
 def test_main_grid_m_1(capsys):
-    assert xo.main([FIXTURES / 'grid_m_1.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_m_1.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '|   |   |   | X | O | X |   |   |  7' in out
@@ -58,7 +58,7 @@ def test_main_grid_m_1(capsys):
 
 
 def test_main_grid_m_2(capsys):
-    assert xo.main([FIXTURES / 'grid_m_2.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_m_2.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '| O | X | X | O |   |   | X |   |  2' in out
@@ -66,7 +66,7 @@ def test_main_grid_m_2(capsys):
 
 
 def test_main_grid_x_1(capsys):
-    assert xo.main([FIXTURES / 'grid_x_1.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_x_1.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '|   |   | X |   | X | X | O | O | X | X |  8' in out
@@ -74,7 +74,7 @@ def test_main_grid_x_1(capsys):
 
 
 def test_main_grid_x_2(capsys):
-    assert xo.main([FIXTURES / 'grid_x_2.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_x_2.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '|   |   |   | O |   |   |   |   |   |   |  9' in out
@@ -82,7 +82,7 @@ def test_main_grid_x_2(capsys):
 
 
 def test_main_grid_x_3(capsys):
-    assert xo.main([FIXTURES / 'grid_x_3.txt']) == 0
+    assert xo.main([str(FIXTURES / 'grid_x_3.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert 'Problem:' in out
@@ -95,7 +95,7 @@ def test_main_grid_x_3(capsys):
 
 
 def test_main_tic_tac_toe_wild_with_overrun(capsys):
-    assert xo.main([FIXTURES / 'tic_tac_toe.txt']) == 0
+    assert xo.main([str(FIXTURES / 'tic_tac_toe.txt')]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert '| X | X | O | X | O | O |  6' in out
