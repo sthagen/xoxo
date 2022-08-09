@@ -16,7 +16,7 @@ User and developer [documentation of xoxo](https://codes.dilettant.life/docs/xox
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of xoxo](https://todo.sr.ht/~sthagen/xoxo).
+Feature requests and bug reports are best entered in the [todos of xoxo](https://todo.sr.ht/~sthagen/xoxo).
 
 ## Primary Source repository
 
