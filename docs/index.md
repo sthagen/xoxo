@@ -12,7 +12,7 @@ Balanced diversity solver xoxo to the square.
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of xoxo](https://todo.sr.ht/~sthagen/xoxo).
+Feature requests and bug reports are best entered in the [todos of xoxo](https://todo.sr.ht/~sthagen/xoxo).
 
 ## Primary Source repository
 
