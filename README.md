@@ -101,12 +101,3 @@ More in the [usage documentation](https://codes.dilettant.life/docs/xoxo/usage/)
 Experimental.
 
 **Note** The default branch is `default`.
-## Primary Source repository
-
-The primary source of `xoxo` lives somewhere on a mountain in Central Switzerland.
-But, we use decentralized version control (git), so any clone can become the source to everyone's benefit, no central only code.
-Anyway, the preferred public clones of `xoxo` are:
-
-* [on codeberg](https://codeberg.org/sthagen/xoxo) - a collaboration platform and git hosting for free and open source software, content and projects.
-* [at sourcehut](https://git.sr.ht/~sthagen/xoxo) - a collection of tools useful for software development.
-
