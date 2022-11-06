@@ -3,6 +3,9 @@ site_description: Balanced diversity solver xoxo to the square.
 
 theme:
   name: 'material'
+  features:
+    - navigation.expand
+    - toc.integrate
   palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
