@@ -1,8 +1,10 @@
-# xoxo
+# XOXO
 
 Balanced diversity solver xoxo to the square.
 
 [License: MIT](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE)
+
+Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
 [![downloads](https://pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
