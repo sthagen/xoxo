@@ -7,7 +7,7 @@ Balanced diversity solver xoxo to the square.
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![downloads](https://pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
+[![downloads](https://static.pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
 [![wheel](https://img.shields.io/pypi/wheel/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
