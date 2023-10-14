@@ -2,7 +2,7 @@
 
 Balanced diversity solver xoxo to the square.
 
-[License: MIT](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE)
+[License: MIT](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE) | 
 [Country of origin: Switzerland](https://git.sr.ht/~sthagen/xoxo/tree/default/item/COUNTRY-OF-ORIGIN)
 
 Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
