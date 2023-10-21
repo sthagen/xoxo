@@ -1,0 +1,14 @@
+name: xoxo
+description: Balanced diversity solver xoxo to the square.
+license_spdx: MIT
+version: 2023.10.21
+spec_version: 1.0
+home_url: https://git.sr.ht/~sthagen/xoxo
+news_url: https://libraries.io/pypi/xoxo/versions.atom
+date: 2023-10-21
+about_resource: ./
+libraries_io_url: https://libraries.io/pypi/xoxo?number=2023.10.21
+vcs_tool: git
+vcs_repository: https://git.sr.ht/~sthagen/xoxo
+vcs_branch: default
+
