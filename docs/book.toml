@@ -1,0 +1,17 @@
+[book]
+authors = ["Stefan Hagen"]
+language = "en"
+multilingual = false
+src = "."
+title = "Xoxo"
+
+[preprocessor.embed]
+
+[build]
+builddir = "book"
+
+[output.html]
+mathjax-support = true
+site-url = "/docs/xoxo"
+git-repository-url = "https://git.sr.ht/~sthagen/xoxo"
+
