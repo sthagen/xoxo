@@ -2,18 +2,15 @@
 
 Balanced diversity solver xoxo to the square.
 
-[License: MIT](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE) | 
-[Country of origin: Switzerland](https://git.sr.ht/~sthagen/xoxo/tree/default/item/COUNTRY-OF-ORIGIN) | 
-[Export control classification number(ECCN): EAR99](https://git.sr.ht/~sthagen/xoxo/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
+[![License](docs/badges/license-spdx-mit.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE)
+[![Country of Origin](docs/badges/country-of-origin-name-switzerland-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/COUNTRY-OF-ORIGIN)
+[![Export Classification Control Number (ECCN)](docs/badges/export-control-classification-number_eccn-ear99-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
+[![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/docs/third-party/README.md)
 
-Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
-
-[![version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![downloads](https://static.pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
-[![wheel](https://img.shields.io/pypi/wheel/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![supported-versions](https://img.shields.io/pypi/pyversions/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![supported-implementations](https://img.shields.io/pypi/implementation/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![maintenance-status](https://img.shields.io/github/commit-activity/y/sthagen/xoxo.svg?style=flat)](https://git.sr.ht/~sthagen/xoxo/log)
+[![Version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
+[![Downloads](https://static.pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
+[![Maintenance Status](https://img.shields.io/github/commit-activity/y/sthagen/xoxo.svg?style=flat)](https://git.sr.ht/~sthagen/xoxo/log)
 
 ## Documentation
 
