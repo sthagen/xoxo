@@ -10,7 +10,7 @@ Balanced diversity solver xoxo to the square.
 [![Version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
 [![Downloads](https://static.pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![Maintenance Status](docs/badges/downloads-per-month.svg)](https://git.sr.ht/~sthagen/xoxo/log)
+[![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/xoxo/log)
 
 ## Documentation
 
