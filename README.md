@@ -8,7 +8,7 @@ Balanced diversity solver xoxo to the square.
 [![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/docs/third-party/README.md)
 
 [![Version](https://img.shields.io/pypi/v/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
-[![Downloads](https://static.pepy.tech/badge/xoxo/month)](https://pepy.tech/project/xoxo)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/xoxo)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/xoxo.svg?style=flat)](https://pypi.python.org/pypi/xoxo/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/xoxo/log)
 
