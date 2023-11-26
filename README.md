@@ -2,15 +2,15 @@
 
 Balanced diversity solver xoxo to the square.
 
-[![License](docs/badges/license-spdx-mit.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE)
-[![Country of Origin](docs/badges/country-of-origin-name-switzerland-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/COUNTRY-OF-ORIGIN)
-[![Export Classification Control Number (ECCN)](docs/badges/export-control-classification-number_eccn-ear99-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
-[![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/docs/third-party/README.md)
+[![License](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/license-spdx-mit.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/LICENSE)
+[![Country of Origin](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/country-of-origin-name-switzerland-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/COUNTRY-OF-ORIGIN)
+[![Export Classification Control Number (ECCN)](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/export-control-classification-number_eccn-ear99-neutral.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/EXPORT-CONTROL-CLASSIFICATION-NUMBER)
+[![Configuration](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/xoxo/tree/default/item/docs/third-party/README.md)
 
-[![Version](docs/badges/latest-release.svg)](https://pypi.python.org/pypi/xoxo/)
-[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/xoxo)
-[![Python](docs/badges/python-versions.svg)](https://pypi.python.org/pypi/xoxo/)
-[![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/xoxo/log)
+[![Version](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/latest-release.svg)](https://pypi.python.org/pypi/xoxo/)
+[![Downloads](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/downloads-per-month.svg)](https://pepy.tech/project/xoxo)
+[![Python](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/python-versions.svg)](https://pypi.python.org/pypi/xoxo/)
+[![Maintenance Status](https://git.sr.ht/~sthagen/xoxo/blob/default/docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/xoxo/log)
 
 ## Documentation
 
