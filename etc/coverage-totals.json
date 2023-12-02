@@ -1,7 +1,7 @@
 {
   "xoxo": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:39:18.569587",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 16:35:40 +00:00",
     "branch_coverage": true,
     "show_contexts": true,
     "covered_lines": 173,
@@ -13,6 +13,22 @@
     "num_branches": 93,
     "num_partial_branches": 1,
     "covered_branches": 92,
-    "missing_branches": 1
+    "missing_branches": 1,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 3,
+    "files": [
+      "xoxo/__init__.py",
+      "xoxo/cli.py",
+      "xoxo/xoxo.py"
+    ],
+    "blake3": "8107d106dedafc1114e4647667f7928410a60a83a970de7946bb828e338de629",
+    "blake2": "aca2cd97c0484f30cb8266893570e77da347bb0fc8f21b77e0a0ed2db69d82712bade8e2fdde48ddb527c37c6599c7a416383c116f85d0f0574c1defaab6b12c",
+    "sha512": "e39751878ff9055f5371e789fe364fe5491a4feb72f37320384870baa71325209a661aae458d00d979626d65ecc617d7b1ead9b560181d4571f4ad9316c6441a",
+    "sha384": "67125690e5d74ab918c9b7a531eca76c5d15752f9aee2ec7fb8decd6cab2c1053e54521c21ff1a88717e11980d52e3b5",
+    "sha256": "25b199ac8b303da8b99a59710b2d4f6de08f5c2505abe1f5520751556928cbf4",
+    "sha1": "f46cb0085289c5fbbc760c4d84a31147434e73a0",
+    "md5": "ca4a76745bc9c9b88e1f6b6d5630fa7a",
+    "python_version": "3.10.12",
+    "entropy": 4.868581
   }
 }
