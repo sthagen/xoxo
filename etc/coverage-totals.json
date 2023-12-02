@@ -1,0 +1,18 @@
+{
+  "xoxo": {
+    "version": "7.3.2",
+    "timestamp": "2023-12-02T15:39:18.569587",
+    "branch_coverage": true,
+    "show_contexts": true,
+    "covered_lines": 173,
+    "num_statements": 176,
+    "percent_covered": 98.51301115241635,
+    "percent_covered_display": "98.51",
+    "missing_lines": 3,
+    "excluded_lines": 1,
+    "num_branches": 93,
+    "num_partial_branches": 1,
+    "covered_branches": 92,
+    "missing_branches": 1
+  }
+}
