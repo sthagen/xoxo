@@ -33,7 +33,7 @@
     {
       "category": "3.10",
       "date": "2024-01",
-      "downloads": 96
+      "downloads": 104
     },
     {
       "category": "3.11",
@@ -68,12 +68,12 @@
     {
       "category": "3.11",
       "date": "2024-01",
-      "downloads": 98
+      "downloads": 106
     },
     {
       "category": "3.12",
       "date": "2024-01",
-      "downloads": 42
+      "downloads": 50
     },
     {
       "category": "3.3",
@@ -118,7 +118,7 @@
     {
       "category": "3.8",
       "date": "2024-01",
-      "downloads": 48
+      "downloads": 52
     },
     {
       "category": "3.9",
@@ -178,7 +178,7 @@
     {
       "category": "null",
       "date": "2024-01",
-      "downloads": 14
+      "downloads": 15
     }
   ],
   "package": "xoxo",
