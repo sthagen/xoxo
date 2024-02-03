@@ -6,7 +6,7 @@ from typing import List, Union
 
 ENCODING = 'utf-8'
 X = 'x'
-O = 'o'
+O = 'o'  # noqa
 E = ' '
 SYMBOLS = (X, O)
 TOKENS = (E, *SYMBOLS)

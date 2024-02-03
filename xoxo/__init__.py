@@ -1,4 +1,5 @@
 """Balanced diversity solver xoxo to the square."""
+
 import os
 import pathlib
 from typing import List
