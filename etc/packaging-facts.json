@@ -20,6 +20,7 @@
       "last_month": -1,
       "last_week": -1
     },
+    "dynamic": null,
     "home_page": "",
     "keywords": "games,solver",
     "license": "",
@@ -36,6 +37,7 @@
       "Source-Code": "https://git.sr.ht/~sthagen/xoxo",
       "Test-Coverage": "https://codes.dilettant.life/coverage/xoxo"
     },
+    "provides_extra": null,
     "release_url": "https://pypi.org/project/xoxo/2023.10.21/",
     "requires_dist": [
       "black ; extra == 'dev'",
