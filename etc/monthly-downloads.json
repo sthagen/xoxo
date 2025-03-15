@@ -2,13 +2,8 @@
   "data": [
     {
       "category": "3.10",
-      "date": "2024-08",
-      "downloads": 40
-    },
-    {
-      "category": "3.10",
       "date": "2024-09",
-      "downloads": 245
+      "downloads": 131
     },
     {
       "category": "3.10",
@@ -33,17 +28,17 @@
     {
       "category": "3.10",
       "date": "2025-02",
-      "downloads": 176
+      "downloads": 216
     },
     {
-      "category": "3.11",
-      "date": "2024-08",
-      "downloads": 40
+      "category": "3.10",
+      "date": "2025-03",
+      "downloads": 114
     },
     {
       "category": "3.11",
       "date": "2024-09",
-      "downloads": 242
+      "downloads": 130
     },
     {
       "category": "3.11",
@@ -68,17 +63,17 @@
     {
       "category": "3.11",
       "date": "2025-02",
-      "downloads": 176
+      "downloads": 216
     },
     {
-      "category": "3.12",
-      "date": "2024-08",
-      "downloads": 40
+      "category": "3.11",
+      "date": "2025-03",
+      "downloads": 112
     },
     {
       "category": "3.12",
       "date": "2024-09",
-      "downloads": 242
+      "downloads": 128
     },
     {
       "category": "3.12",
@@ -103,17 +98,17 @@
     {
       "category": "3.12",
       "date": "2025-02",
-      "downloads": 176
+      "downloads": 216
     },
     {
-      "category": "3.8",
-      "date": "2024-08",
-      "downloads": 40
+      "category": "3.12",
+      "date": "2025-03",
+      "downloads": 112
     },
     {
       "category": "3.8",
       "date": "2024-09",
-      "downloads": 240
+      "downloads": 128
     },
     {
       "category": "3.8",
@@ -138,12 +133,12 @@
     {
       "category": "3.8",
       "date": "2025-02",
-      "downloads": 176
+      "downloads": 216
     },
     {
-      "category": "3.9",
-      "date": "2024-08",
-      "downloads": 2
+      "category": "3.8",
+      "date": "2025-03",
+      "downloads": 112
     },
     {
       "category": "3.9",
@@ -156,14 +151,14 @@
       "downloads": 2
     },
     {
-      "category": "null",
-      "date": "2024-08",
-      "downloads": 4
+      "category": "3.9",
+      "date": "2025-03",
+      "downloads": 2
     },
     {
       "category": "null",
       "date": "2024-09",
-      "downloads": 46
+      "downloads": 19
     },
     {
       "category": "null",
@@ -188,7 +183,12 @@
     {
       "category": "null",
       "date": "2025-02",
-      "downloads": 120
+      "downloads": 148
+    },
+    {
+      "category": "null",
+      "date": "2025-03",
+      "downloads": 44
     }
   ],
   "package": "xoxo",
